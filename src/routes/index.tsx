@@ -1,10 +1,8 @@
-import { lazy } from "react";
+import Layout from "@components/layout";
+import Form from "@components/pages/form";
+import List from "@components/pages/list";
+import ViewItem from "@components/pages/ViewItem";
 import { createBrowserRouter } from "react-router-dom";
-
-const Layout = lazy(() => import("@components/layout"));
-const List = lazy(() => import("@components/pages/list"));
-const Form = lazy(() => import("@components/pages/list"));
-const ViewItem = lazy(() => import("@components/pages/list"));
 
 export const router = createBrowserRouter([
   {
