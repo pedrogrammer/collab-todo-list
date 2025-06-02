@@ -5,7 +5,7 @@ import EmptyList from "@assets/emptyList";
 import ListItem from "@components/listItem";
 import { Button, Input, Select } from "antd";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const wrapperStyle = css({
   display: "flex",
@@ -41,12 +41,6 @@ function List() {
     setmockDataList((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const navigate = useNavigate();
-
-  // function closeHandler() {
-  //   navigate("..");
-  // }
-
   return (
     <div css={wrapperStyle}>
       <div style={{ display: "flex", width: "100%", gap: 16 }}>
@@ -59,7 +53,7 @@ function List() {
           defaultValue="all"
           size="large"
           style={{ width: 100 }}
-          // onChange={handleChange}
+          className="custom-select"
           options={[
             { value: "all", label: "ALL" },
             { value: "sports", label: "SPORTS" },
@@ -79,14 +73,16 @@ function List() {
           <EmptyList />
         )}
       </div>
-      <Button
-        css={floatingButtonStyle}
-        size="large"
-        shape="circle"
-        type="primary"
-        icon={<PlusOutlined />}
-        onClick={() => navigate("/create-item")}
-      />
+      <Link to="/create-item">
+        <Button
+          css={floatingButtonStyle}
+          size="large"
+          shape="circle"
+          type="primary"
+          icon={<PlusOutlined />}
+        />
+      </Link>
+      <Outlet />
     </div>
   );
 }
