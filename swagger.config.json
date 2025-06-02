@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://apidev.khoshgovar.ir/swagger/Auth/swagger.json",
+    "dir": "./src/core/services/auth",
+    "prettierPath": ".prettierrc",
+    "language": "typescript",
+    "reactHooks": true
+  },
+  {
+    "url": "https://apidev.khoshgovar.ir/swagger/Developer/swagger.json",
+    "dir": "./src/core/services/developer",
+    "prettierPath": ".prettierrc",
+    "language": "typescript",
+    "reactHooks": true
+  },
+  {
+    "url": "https://apidev.khoshgovar.ir/swagger/Public/swagger.json",
+    "dir": "./src/core/services/public",
+    "prettierPath": ".prettierrc",
+    "language": "typescript",
+    "reactHooks": true
+  }
+]
